@@ -15,5 +15,7 @@ sudo apt-get install -y software-properties-common apparmor-utils apt-transport-
 sudo systemctl disable ModemManager
 sudo systemctl stop ModemManager
 sudo curl -fsSL get.docker.com | sh
-sudo curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh" | bash -s -- -m raspberrypi4
+sudo usermod -aG docker pi
+sudo -i
+curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh" | bash -s -- -m raspberrypi4
 ```
