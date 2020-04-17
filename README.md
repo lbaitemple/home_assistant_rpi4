@@ -14,8 +14,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt-get install -y software-properties-common apparmor-utils apt-transport-https avahi-daemon ca-certificates curl dbus jq network-manager socat -y
 sudo systemctl disable ModemManager
 sudo systemctl stop ModemManager
-sudo curl -fsSL get.docker.com | sh
-sudo usermod -aG docker pi
 sudo -i
+curl -fsSL get.docker.com | sh
+usermod -aG docker pi
 curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh" | bash -s -- -m raspberrypi4
 ```
